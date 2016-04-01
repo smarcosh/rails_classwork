@@ -1,0 +1,20 @@
+<h1>Welcome to my Travel Site</h1>
+<p>This is my very awesome travel site.</p>
+<%= link_to "About", about_path %>
+<%= link_to "Destinations", destinations_path %>
+<%= link_to "Contact", contact_path %>
+<!-- correct -->
+<p> I'm from <%= @homeland %></p>
+<ul>
+<% @countries.each do |country| %>
+  <li>
+  	<%= country %>
+  </li>
+<% end %>
+</ul>
+
+<% @images.each do |images| %>
+  	<%= image_tag images, class: "img-responsive", class: "sort_by { rand }" %>
+<% end %>
+
+<%= image_tag "chile.jpeg", alt:"name",id: "chile", class:"country", height: 300, width:400 %>

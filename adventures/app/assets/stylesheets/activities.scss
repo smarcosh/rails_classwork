@@ -1,0 +1,6 @@
+.rand_images {
+	@images = ["IMG_5192.JPG", "chile.jpeg", "santi.JPG", 'chile.jpeg']
+	<% @images.each do |images| %>
+  	<%= image_tag images, class: "img-responsive", class: "sort_by { rand }" %>
+	<% end %>
+}

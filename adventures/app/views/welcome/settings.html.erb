@@ -1,0 +1,25 @@
+<style>
+.para1 {
+	font-family: <%= @font %>;
+}
+</style>
+
+<h1>Settings</h1>
+<p>Want to change the font color?</p>
+
+<p class="para1">
+
+Now seven world think timed while her. Spoil large oh he rooms on since an. Am up unwilling eagerness perceived incommode. Are not windows set luckily musical hundred can. Collecting if sympathize middletons be of of reasonably. Horrible so kindness at thoughts exercise no weddings subjects. The mrs gay removed towards journey chapter females offered not. Led distrusts otherwise who may newspaper but. Last he dull am none he mile hold as. 
+
+At every tiled on ye defer do. No attention suspected oh difficult. Fond his say old meet cold find come whom. The sir park sake bred. Wonder matter now can estate esteem assure fat roused. Am performed on existence as discourse is. Pleasure friendly at marriage blessing or. 
+
+Post no so what deal evil rent by real in. But her ready least set lived spite solid. September how men saw tolerably two behaviour arranging. She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward. Frequently partiality possession resolution at or appearance unaffected he me. Engaged its was evident pleased husband. Ye goodness felicity do disposal dwelling no. First am plate jokes to began of cause an scale. Subjects he prospect elegance followed no overcame possible it on. 
+
+</p>
+
+<p>Press a button to do so</p>
+<%= link_to "Marck Script", settings_path(font: "Marck Script"), class: "btn btn-primary" %>
+<%= link_to "Oswald", settings_path(font: "Oswald"), class: "btn btn-primary" %>
+<%= link_to "Old Standard TT", settings_path(font: 'Old Standard TT'), class: "btn btn-danger" %>
+<%= link_to 'Open Sans', settings_path(font:'Open Sans'), class: "btn btn-primary" %>
+
