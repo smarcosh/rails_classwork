@@ -1,0 +1,16 @@
+.cant-see-me {
+	display: none;
+}
+
+.container {
+	background-color: #D3D3D3;
+}
+
+body {
+	background-color: #778899;
+}
+
+/*
+ *= require_tree .
+ *= require_self
+ */

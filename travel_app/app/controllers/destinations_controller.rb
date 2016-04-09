@@ -12,7 +12,7 @@ class DestinationsController < ApplicationController
       @destinations = Destination.where(country: params[:country].titleize)
     end
     @my_countries = Destination.select(:country).order(:country).distinct 
-  end
+  end  
 
   # GET /destinations/1
   # GET /destinations/1.json

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<ul class="nav nav-pills" role="tablist">
+<li><%= link_to "All", teachers_path %></li>
+  <% @all_classes.each do |c| %>
+  <li><%= link_to "#{c.class_subject}", controller: "teachers", class_subject: "#{c.class_subject}" %></li>
+  <% end %>
+</ul>
+ 
+<h1>Listing Teachers</h1>
+
+  <div class="row">
+  <% @teachers.each do |teacher| %>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+        <h2><%= teacher.name %></h2>
+        <h3><%= teacher.class_subject %></h3>
+        <h5> Level: <%= teacher.level %></h5>
+        <% if teacher.avatar_file_name != nil %>
+        <%= image_tag teacher.avatar.url(:medium), class: "img-responsive" %>
+        <% end %>
+        <%# if teacher.avatar_file_name != nil %>
+        <%#= image_tag teacher.avatar.url(:medium), class: "img-responsive" %>
+        <%# end %>
+      
+      <div class="btn-group">
+        <td><%= link_to 'Show', teacher, class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_teacher_path(teacher), class: "btn btn-default" %></td>
+        <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%end%>
+</div>
+
+<br>
+
+<%= link_to 'New Teacher', new_teacher_path, class: "btn btn-default" %>

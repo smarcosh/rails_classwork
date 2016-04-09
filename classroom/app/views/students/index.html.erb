@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+
+<!-- <ul class="nav nav-pills" role="tablist">
+<li><%#= link_to "All", students_path %></li>
+  <#% @all_students.each do |c| %>
+  <li><%#= link_to "#{c.name}", controller: "students", name: "#{c.name}" %></li>
+  <#% end %>
+</ul>-->
+
+<h1>Listing Students</h1>
+
+  <div class="row">
+  <% @students.each do |student| %>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+        <h3><%= student.name %></h3>
+        <h4><%= student.age %></h4>
+        <h4><%= student.gender %></h4>
+        <h4><%= student.level %></h4>
+        
+        <div class="btn-group">
+        <td><%= link_to 'Show', student, class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_student_path(student), class: "btn btn-default" %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
+      </div>
+      </div>
+    </div>
+  </div>
+  <%end%>
+</div>
+
+<br>
+
+<%= link_to 'New Student', new_student_path %>
